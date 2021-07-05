@@ -2,7 +2,7 @@
 
 install `is`
 
-> npm install is
+> npm i @bisaek/is
 
 <br>
 

@@ -1,0 +1,22 @@
+{
+    "name": "is",
+    "version": "1.0.0",
+    "description": "is a var",
+    "main": "is.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/huggergamez/package.git"
+    },
+    "keywords": [
+        "IS"
+    ],
+    "author": "bisaek",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/huggergamez/package/issues"
+    },
+    "homepage": "https://github.com/huggergamez/package#readme"
+}

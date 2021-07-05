@@ -1,5 +1,5 @@
 {
-    "name": "is",
+    "name": "@bisaek/is",
     "version": "1.0.0",
     "description": "is a var",
     "main": "is.js",

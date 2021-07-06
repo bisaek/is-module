@@ -19,3 +19,6 @@ exports.year = function(year) {
 exports.month = function(month) {
     return month == new Date().getMonth();
 }
+exports.version = function(version) {
+    return version == process.version;
+}

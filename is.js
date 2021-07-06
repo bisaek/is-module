@@ -17,7 +17,7 @@ module.exports.year = function(year) {
     return year == new Date().getFullYear();
 }
 module.exports.month = function(month) {
-    if (typeof month == 'string') {
+    if (typeof month == 'string' && month != '0') {
         if (month.toLowerCase() == 'january') month = 0;
         else if (month.toLowerCase() == 'february') month = 1;
         else if (month.toLowerCase() == 'march') month = 2;
@@ -31,11 +31,11 @@ module.exports.month = function(month) {
         else if (month.toLowerCase() == 'november') month = 10;
         else if (month.toLowerCase() == 'december') month = 11;
         else {
-            month = 0;
             return month + ' its not a month';
+            month = -1;
         }
     }
-    if (month != 0) return month == new Date().getMonth();
+    if (month != -1) return month == new Date().getMonth();
 }
 module.exports.version = function(version) {
     return version == process.version;

@@ -1,3 +1,12 @@
+const package = require('./package')
+
+module.exports = function(func) {
+    if (func == 'version') {
+        return package.version
+    }
+}
+
+
 exports.sus = function(susText) {
     return susText == 'sus' || susText == 'imposter';
 }

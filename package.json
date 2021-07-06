@@ -1,7 +1,7 @@
 {
     "name": "@bisaek/is",
     "version": "0.2.1",
-    "description": "is a var",
+    "description": "the best package for nodejs",
     "main": "is.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"

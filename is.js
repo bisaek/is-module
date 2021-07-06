@@ -40,7 +40,3 @@ module.exports.month = function(month) {
 module.exports.version = function(version) {
     return version == process.version;
 }
-
-module.exports.dead = function(dead) {
-    return dead == true
-}

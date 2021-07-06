@@ -10,4 +10,4 @@ install `is`
 
 reqiure `is`
 
-> const is = require('is');
+> const is = require('@bisaek/is');

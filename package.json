@@ -1,6 +1,6 @@
 {
     "name": "@bisaek/is",
-    "version": "0.2",
+    "version": "0.2.0",
     "description": "is a var",
     "main": "is.js",
     "scripts": {

@@ -16,3 +16,6 @@ exports.rich = function(money) {
 exports.year = function(year) {
     return year == new Date().getFullYear();
 }
+exports.month = function(month) {
+    return month == new Date().getMonth();
+}

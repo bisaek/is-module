@@ -1,5 +1,7 @@
 const package = require('./package')
 
+
+//exports functions
 module.exports = function(func) {
     if (func == 'version') {
         return package.version

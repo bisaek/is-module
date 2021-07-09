@@ -1,4 +1,4 @@
-# is
+# is [wiki](https://github.com/bisaek/is-module/wiki)
 
 install:
 
@@ -69,4 +69,4 @@ true
 true
 ```
 
-[read more](https://github.com/bisaek/is-module/wiki)
+## [read more](https://github.com/bisaek/is-module/wiki)

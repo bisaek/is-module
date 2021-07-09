@@ -17,15 +17,16 @@ module.exports.rich = function(money, richType) {
     else return money >= eval('config.rich.' + richType);
 }
 
-module.exports.year = function(year) {
-    return year == new Date().getFullYear();
+module.exports.year = function(year, date) {
+    if (typeof date == 'string') date = eval('config.year.' + date);
+
+    if (date == undefined && year != '') return year == new Date().getFullYear();
+    else if (year != '') return year == date;
+    else return date == new Date().getFullYear();
 }
 
 module.exports.month = function(month, date) {
-    if (typeof date == 'string') {
-        date = eval('config.month.' + date);
-
-    }
+    if (typeof date == 'string') date = eval('config.month.' + date);
     // convert month to number
     if (typeof month == 'string' && month != '') {
         if (month.toLowerCase() == 'january') month = 0;

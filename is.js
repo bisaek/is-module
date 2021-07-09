@@ -24,9 +24,10 @@ module.exports.year = function(year) {
 module.exports.month = function(month, date) {
     if (typeof date == 'string') {
         date = eval('config.month.' + date);
+
     }
     // convert month to number
-    if (typeof month == 'string' && month != '0') {
+    if (typeof month == 'string' && month != '') {
         if (month.toLowerCase() == 'january') month = 0;
         else if (month.toLowerCase() == 'february') month = 1;
         else if (month.toLowerCase() == 'march') month = 2;
@@ -64,8 +65,9 @@ module.exports.month = function(month, date) {
         }
     }
 
-    if (month != -1 && date == undefined) return month == new Date().getMonth();
-    else if (month != -1) return month == date;
+    if (month != -1 && date == undefined && month != '') return month == new Date().getMonth();
+    else if (month != -1 && month != '') return month == date;
+    else if (month != -1) return date == new Date().getMonth();
 }
 
 module.exports.version = function(version) {
@@ -88,7 +90,7 @@ let config = {
     year: {
 
     },
-    date: function(name, month, year) {
+    date: function(name, year, month) {
         eval('config.month.' + name + ' = ' + month);
         eval('config.year.' + name + ' = ' + year);
     },

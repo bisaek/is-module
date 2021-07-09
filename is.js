@@ -9,15 +9,18 @@ module.exports = function(func) {
 // is function
 
 module.exports.sus = function(susText) {
-    return susText == 'sus' || susText == 'imposter';
+    return config.sus.includes(susText);
 }
+
 module.exports.rich = function(money, richType) {
     if (richType == undefined) return money >= config.rich.standert;
     else return money >= eval('config.rich.' + richType);
 }
+
 module.exports.year = function(year) {
     return year == new Date().getFullYear();
 }
+
 module.exports.month = function(month, date) {
     if (typeof date == 'string') {
         date = eval('config.month.' + date);
@@ -64,6 +67,7 @@ module.exports.month = function(month, date) {
     if (month != -1 && date == undefined) return month == new Date().getMonth();
     else if (month != -1) return month == date;
 }
+
 module.exports.version = function(version) {
     return version == process.version;
 }
@@ -88,6 +92,7 @@ let config = {
         eval('config.month.' + name + ' = ' + month);
         eval('config.year.' + name + ' = ' + year);
     },
+    sus: ['sus', 'imposter', 'teacher'],
 }
 module.exports.config = config;
 module.exports.isConfig = config;

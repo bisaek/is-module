@@ -1,6 +1,6 @@
 {
     "name": "@bisaek/is",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "description": "the best package for nodejs",
     "main": "is.js",
     "scripts": {

@@ -1,10 +1,12 @@
 const package = require('./package')
+    //config
 
 
-//exports functions
+
+// is function
 module.exports = function(func) {
     if (func == 'version') {
-        return package.version
+        return package.version;
     }
 }
 
@@ -46,3 +48,16 @@ module.exports.version = function(version) {
 module.exports.dead = function(dead) {
     return dead == 'dead' || dead == true;
 }
+
+
+//config
+let config = {
+    rich: {
+        standert: 1000000
+    },
+    test: 'dette er også en test'
+}
+module.exports.config = config;
+module.exports.isConfig = config;
+module.exports.settings = config;
+module.exports.isSettings = config;

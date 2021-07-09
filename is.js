@@ -80,7 +80,14 @@ let config = {
     },
     month: {
 
-    }
+    },
+    year: {
+
+    },
+    date: function(name, month, year) {
+        eval('config.month.' + name + ' = ' + month);
+        eval('config.year.' + name + ' = ' + year);
+    },
 }
 module.exports.config = config;
 module.exports.isConfig = config;

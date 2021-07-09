@@ -19,12 +19,14 @@ npm install @bisaek/is
 reqiure `is`
 
 ```js
-const is = require("@bisaek/is");
+const { isConfig, is } = require("is");
 ```
 
 <br>
 
 ---
+
+## code example
 
 with `is`:
 
@@ -53,9 +55,10 @@ with `is` its better because its more readable, and less. in `is` can you use st
 example:
 
 ```js
-//its january
-console.log(is.month("january"));
-console.log(is.month(0));
+isConfig.month.jan = 0;
+
+console.log(is.month("january"), "jan");
+console.log(is.month(0), "jan");
 ```
 
 console:
@@ -65,3 +68,5 @@ console:
 true
 true
 ```
+
+[read more](https://github.com/bisaek/is-module/wiki)

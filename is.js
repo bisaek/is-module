@@ -1,15 +1,12 @@
 const package = require('./package')
-    //config
 
-
-
-// is function
 module.exports = function(func) {
     if (func == 'version') {
         return package.version;
     }
 }
 
+// is function
 
 module.exports.sus = function(susText) {
     return susText == 'sus' || susText == 'imposter';

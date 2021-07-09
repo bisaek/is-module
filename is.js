@@ -11,8 +11,9 @@ module.exports = function(func) {
 module.exports.sus = function(susText) {
     return susText == 'sus' || susText == 'imposter';
 }
-module.exports.rich = function(money) {
-    return money >= 1000000;
+module.exports.rich = function(money, richType) {
+    if (richType === undefined) return money >= config.rich.standert;
+    else return money >= eval('config.rich.' + richType);
 }
 module.exports.year = function(year) {
     return year == new Date().getFullYear();
